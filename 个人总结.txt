@@ -1,3 +1,4 @@
+博客地址：http://www.cnblogs.com/schaepher/p/5561193.html
 git教程，github远程仓库
 
 如果文件名是中文的，git status时会乱码，需执行：
