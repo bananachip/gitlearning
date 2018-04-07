@@ -4,4 +4,6 @@ git commit -m "git tutorial";
 git status;
 
 git branch;
-git checkout;
+git checkout dev;
+
+git merge dev;
