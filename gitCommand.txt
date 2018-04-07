@@ -1,7 +1,7 @@
 git add file1.txt;
 git add file1.txt file2.txt;
 git commit -m "git tutorial";
-git status;
+git status
 
 git branch;
 git checkout dev;
