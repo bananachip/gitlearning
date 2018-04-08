@@ -1,0 +1,46 @@
+博客地址：http://www.cnblogs.com/schaepher/p/5561193.html
+git教程，github远程仓库
+
+如果文件名是中文的，git status时会乱码，需执行：
+git config --global core.quotepath false
+
+一.git 本地仓库
+1.下载git
+2.命令前面都要加git(ssh 除外)
+3.本地使用仓库常用命令：
+git init
+git clone ssh地址
+git status ;查看仓库的状态
+git log ;查看当前版本及之前的commit记录
+git reflog;HEAD的变更记录
+git add -A;commit前先add
+git diff 
+git checkout -- .
+git commit -m "提示变化的消息"
+git clean -xf ;删除没有track过的文件
+git reset --hard 7位版本号（与git reflog 配合回到之前的版本或者最新版本）
+4.个人使用远程仓库常用命令
+git push
+git pull;在本地版本低于远程仓库时，获取远程仓库的commit
+添加远程仓库：git remote add origin 复制的ssh地址；//设置origin
+ssh-keygen -t rsa -C "你的邮箱"；//生产sshkey
+
+二、git与github关联
+1）本地git与github的连接
+1、生成ssh key并复制到剪贴板
+ssh-keygen -t rsa -C "你的邮箱"； //三次回车
+clip < ~/.ssh/id_rsa.pub
+2.打开github, 在setting的SSH and GPG keys中添加ssh key
+3.测试是否成功：ssh -T git@github.com
+
+2）创建远程仓库并与本地相连
+1.创建远程仓库,复制其SSH地址
+2.git中运行
+git remote add origin 复制的SSH地址
+如果有README.md或者LICENSE，那么github会拒绝你的push，需要先执行：git pull origin master
+git push -u origin master  //将本地仓库上传至github并进行关联，以后只需执行 git push
+3)最简单的关联方法
+1.创建远程仓库,复制其SSH地址
+2.clone到本地：
+git clone 复制的ssh地址
+（如果clone的是别人的仓库，则不能push上自己的修改）
