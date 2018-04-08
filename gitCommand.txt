@@ -1,9 +1,0 @@
-git add file1.txt;
-git add file1.txt file2.txt;
-git commit -m "git tutorial";
-git status; ÏÔÊ¾×´Ì¬
-
-git branch;
-git checkout dev;
-
-git merge dev;
