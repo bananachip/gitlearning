@@ -1,2 +1,0 @@
-# gitlearning
-参考Schaepher的博客学习git以及github的使用方法，并在此基础上做一些总结方便以后学习使用！
